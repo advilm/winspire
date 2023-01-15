@@ -8,7 +8,7 @@ export default function Home() {
   const theme = useMantineTheme();
   const router = useRouter();
   const [opened, setOpened] = useState(false);
-  
+
   return (
     <>
       <AppShell
@@ -55,10 +55,11 @@ export default function Home() {
         }
       >
         <THREE.Canvas>
-          <ambientLight />
+          {/* <ambientLight />
           <pointLight position={[10, 10, 10]} />
           <Box position={[-1.2, 0, 0]} />
-          <Box position={[1.2, 0, 0]} />
+          <Box position={[1.2, 0, 0]} /> */}
+          Text
         </THREE.Canvas>
       </AppShell>
     </>
@@ -80,9 +81,9 @@ function Box(props) {
       {...props}
       ref={ref}
       scale={clicked ? 1.5 : 1}
-      onClick={_ => click(!clicked)}
-      onPointerOver={_ => hover(true)}
-      onPointerOut={_ => hover(false)}>
+      onClick={() => click(!clicked)}
+      onPointerOver={() => hover(true)}
+      onPointerOut={() => hover(false)}>
       <boxGeometry args={[1, 1, 1]} />
       <meshStandardMaterial color={hovered ? 'hotpink' : 'orange'} />
     </mesh>

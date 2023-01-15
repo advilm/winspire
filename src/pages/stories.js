@@ -126,6 +126,7 @@ export default function Home() {
             <Text
               component="a"
               href='http://20.25.143.75:3001'
+              // href='https://winspired.tech'
               sx={{ fontFamily: 'Greycliff CF, sans-serif' }}
               ta="center"
               fz="md"

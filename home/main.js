@@ -64,7 +64,7 @@ Array(200).fill().forEach(addStar);
 const spaceTexture = new THREE.TextureLoader().load('background3.jpg');
 scene.background = spaceTexture;
 
-const boxTexture = new THREE.TextureLoader().load('women.png');
+const boxTexture = new THREE.TextureLoader().load('oprah.jpg');
 
 
 const box = new THREE.Mesh(new THREE.BoxGeometry(3, 3, 3), new THREE.MeshBasicMaterial({ map: boxTexture }));
@@ -79,6 +79,14 @@ const gailTexture = new THREE.TextureLoader().load('Gail Hanson.webp');
 const gail = new THREE.Mesh(new THREE.BoxGeometry(3, 3, 3), new THREE.MeshBasicMaterial({ map: gailTexture }));
 
 scene.add(gail);
+
+
+const obamaTexture = new THREE.TextureLoader().load('michelle_obama.jpg');
+
+
+const obama = new THREE.Mesh(new THREE.BoxGeometry(2, 2, 2), new THREE.MeshBasicMaterial({ map: obamaTexture }));
+
+scene.add(obama);
 
 
 
@@ -107,6 +115,9 @@ gail.position.z = 5;
 gail.position.x = 4;
 gail.position.y = -1;
 
+obama.position.z = 20
+obama.position.x = -5;
+obama.position.y = -1;
 
 function moveCamera() {
   const t = document.body.getBoundingClientRect().top;
@@ -119,6 +130,10 @@ function moveCamera() {
 
   gail.rotation.y += 0.01;
   gail.rotation.z += 0.01;
+
+  obama.rotation.y += 0.01;
+  obama.rotation.z += 0.01;
+
 
   camera.position.z = t * -0.01;
   camera.position.x = t * -0.0002;
